@@ -10,7 +10,7 @@ const CurrentForecast = ({forecast: { apparentTemperature, humidity, precipProba
     <h2>Current Forecast</h2>
     <div className="currentforecast__div--inner" style={{border: 'solid 1px black', padding: 16, margin: 16}}>
       <h3>{summary}</h3>
-      <p>Time of Forecast: { time }</p>
+      <p>Time of Forecast: { moment.unix(time).format('LT') }</p>
       <p>Temperature: { tempRound(temperature) }</p>
       <p>Feels Like: { tempRound(apparentTemperature) }</p>
       <p>Humidity: {humidity}</p>
